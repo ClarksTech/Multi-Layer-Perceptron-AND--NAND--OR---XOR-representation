@@ -149,8 +149,18 @@ else:
 
 
 # Set the axis limits
-plt.xlim(-2, 2)
-plt.ylim(-2, 2)
+plt.xlim(-0.5, 2)
+plt.ylim(-0.5, 2)
+
+# add Legend
+import matplotlib.patches as mpatches
+
+red_patch = mpatches.Patch(color='red', label='0')
+green_patch = mpatches.Patch(color='green', label='1')
+blue_patch = mpatches.Patch(color='blue', label='Linear Seperator')
+
+plt.legend(handles=[red_patch, green_patch, blue_patch])
+
 
 # Label the plot
 plt.xlabel("Input 1")
